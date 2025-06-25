@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Numans&display=swap" rel="stylesheet">
 
-<div class="soft-blueprint" style="width: 100%; min-height:95vh; margin:0; padding: 0">
+<div class="soft-blueprint" style="width: 100%; min-height:98vh; margin:0; padding: 0">
     <div class="boldonse-regular" style="width: 90%; margin: auto; padding: 2em 0 2em 0">
         {@render children()}
     </div>

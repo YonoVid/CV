@@ -1,11 +1,31 @@
 export interface DescriptionEntry {
     title: string
-    description: string
+    description?: string
 }
 
 export interface SocialLink {
     type: "Github"|"Linkedin"
     url: string
+}
+
+export interface Lenguage {
+    level: "Nativo"|"Conversacional"|"Básico"
+    name: string
+}
+
+export type ExperienceState = "Activo"|"Titulado"|"Egresado"
+
+export type LenguageTag = "HTML"|"JavaScript"|"TypeScript"|"C++"|"Python"|"VB.NET"|"SQL Server"|"Oracle"|"MySQL"
+export type ToolTag = "Node.js"|"Express"|"React"|"Svelte"|"API REST"|"Git"
+export type CategoryTag = "Web"|"Server"|"FrontEnd"|"BackEnd"|"Data"|"Desarrollo"|"Proyecto"|"Habilidad Dura"|"Habilidad Blanda" 
+export type OtherTag = "Comunicación"|"Organización"|"Aprendizaje"|"Ofimática"|"Edición de imágen"|"Other"
+
+export type Tag = LenguageTag|ToolTag|CategoryTag|OtherTag
+
+
+export interface TagData {
+    tags: Tag[]
+    data: string
 }
 
 export interface ActiveYears {
@@ -16,14 +36,12 @@ export interface ActiveYears {
 export interface ExperienceData {
     institution: string
     role: DescriptionEntry
+    state: ExperienceState
     activeTime: ActiveYears
 }
 
-export interface EducationData {
-    institution: string
-    title: string
-    state: string
-    activeTime: ActiveYears
+export interface JobData extends ExperienceData {
+    activities: TagData[]
 }
 
 export interface PersonalData {
@@ -31,7 +49,15 @@ export interface PersonalData {
     phone: number
     email: string
     region: string
-    experience: ExperienceData[]
-    education: EducationData[]
+    skill?: TagData[]
+    job?: JobData[]
+    education: ExperienceData[]
     social: SocialLink[]
+    lenguage: Lenguage[]
+    other?: TagData[]
+}
+
+export interface FilterList {
+    white: Tag[]
+    black: Tag[]
 }

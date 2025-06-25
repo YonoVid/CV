@@ -10,22 +10,24 @@
     let { personal }: {personal: PersonalData} = $props()
 </script>
 
-<div style="display: flex; padding: 0">
-    <h1 style="color: white; backround-color:#FFF">{personal.name}</h1>
-    <Socials data={personal.social}/>
-</div>
-<div class="data">
-    <div class="data-item">
-        <img width="10em" src="{mapIcon}" alt="Map Icon"/>
-        <b>{personal.region}</b>
+<div style="padding: 0 0 1em 0">
+    <div style="display: flex;">
+        <h1 style="color: white; backround-color:#FFF">{personal.name}</h1>
+        <Socials data={personal.social}/>
     </div>
-    <div class="data-item">
-        <img width="10em" src="{phoneIcon}" alt="Phone Icon"/>
-        <a href="tel:{personal.phone}">{formatPhone(personal.phone)}</a>
-    </div>
-    <div class="data-item">
-        <img width="10em" src="{mailIcon}" alt="Mail Icon"/>
-        <a href="mailto:{personal.email}">{personal.email}</a>
+    <div class="data">
+        <div class="data-item">
+            <img width="10em" src="{mapIcon}" alt="Map Icon"/>
+            <b>{personal.region}</b>
+        </div>
+        <div class="data-item">
+            <img width="10em" src="{phoneIcon}" alt="Phone Icon"/>
+            <a href="tel:{personal.phone}">{formatPhone(personal.phone)}</a>
+        </div>
+        <div class="data-item">
+            <img width="10em" src="{mailIcon}" alt="Mail Icon"/>
+            <a href="mailto:{personal.email}">{personal.email}</a>
+        </div>
     </div>
 </div>
 
@@ -62,6 +64,7 @@
     }
     .data{
         width: 100%;
+        border-radius: 0.5em 0.5em 0.5em 0.5em;
         display: flex;
         justify-content: center;
         align-items:center;

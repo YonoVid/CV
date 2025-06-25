@@ -1,48 +1,28 @@
 <script lang="ts">
-    import mapIcon from "$lib/assets/map-pin.svg"
-    import phoneIcon from "$lib/assets/smartphone.svg"
-    import mailIcon from "$lib/assets/mail.svg"
-
-    import { personal } from "$lib/data/static"
-    import { formatPhone } from "$lib/index"
-    import Socials from "./Socials.svelte";
+    import { page } from "$app/stores"
+    import { defaultFilter, personal } from "$lib/data/static"
+    import type { FilterList } from "$lib/types/generic";
+    
     import Basic from "./Basic.svelte";
+    import Job from "./Job.svelte";
+    import Education from "./Education.svelte";
+    import Adicional from "./Adicional.svelte";
+    import Skill from "./Skill.svelte";
 
+    let filter: FilterList = defaultFilter
 </script>
 
-
 <div>
-    <Basic {personal}/>
+    <Basic { personal } />
+    <Job experiences = { personal.job ||  [] } filter = { filter } />
+    <Skill skills = { personal.skill || [] } filter = { filter } />
+    <Education experiences = { personal.education } />
+    <Adicional personal = { personal } filter = { filter } />
 </div>
 <footer>
-    <p>
+    <div style="display: flex; justify-content: flex-end; gap: 1em;">
         {#each personal.social as social }
             <a href="{social.url}">{social.type}</a><br/>
         {/each}
-    </p>
+    </div>
 </footer>
-
-
-
-<style>
-    .compact{
-        margin: 0;
-        padding: 0;
-    }
-    h1{
-        font-family: "Boldonse";
-        padding: 0.5em 1em 0.5em 0.5em;
-        margin: 0;
-        border-radius: 0 1em 1em 0;
-        background-color: #2E5596;
-    }
-    p, b, a{
-        font-family: "Numans";
-    }
-    p > a, div > a
-    {
-        font-weight: bold;
-        color: black;
-        text-decoration: none;
-    }
-</style>
