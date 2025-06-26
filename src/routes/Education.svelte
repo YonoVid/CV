@@ -1,12 +1,17 @@
 <script lang="ts">
+    import { slide } from "svelte/transition";
+    import { cubicOut } from "svelte/easing";
+
     import type { ExperienceData } from "$lib/types/generic";
 
-    let { experiences }: {experiences: ExperienceData[]} = $props()
+    let { animationDelay = 0, experiences }: { animationDelay?: number, experiences: ExperienceData[] } = $props()
 </script>
 
 <div style="display: flex; flex-flow: column; padding: 0.5em 0 0.5em 0">
-    <h3 style="backround-color:#FFF">Educación</h3>
-    <div class="container">
+    <h3 transition:slide={{delay: animationDelay, duration: 2000, easing: cubicOut, axis: "x"}} >
+        Educación
+    </h3>
+    <div class="container" transition:slide={{delay: animationDelay + 2000, duration: 1000}} >
         {#each experiences as experience}
             <div class="title-container">
                 <h4 style="flex-grow: 4;">{experience.role.title} - {experience.state}</h4>
@@ -27,6 +32,8 @@
         margin: 0;
         border-radius: 0 1em 1em 0;
         background-color: #2E559682;
+        overflow: hidden;
+        white-space: nowrap;
     }
     h4{
         font-family: "Boldonse";

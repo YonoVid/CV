@@ -1,17 +1,18 @@
 <script lang="ts">
+    import { slide } from "svelte/transition";
+    import { cubicOut } from "svelte/easing";
+
     import { complyFilter } from "$lib";
     import type { FilterList, JobData } from "$lib/types/generic";
 
-    let { experiences, filter }: { experiences: JobData[], filter: FilterList } = $props()
-    let jobs = experiences
-    for(let entry in jobs){
-
-    }
+    let { animationDelay = 0, experiences, filter }: { animationDelay?: number, experiences: JobData[], filter: FilterList } = $props()
 </script>
 
 <div style="display: flex; flex-flow: column; padding: 0.5em 0 0.5em 0">
-    <h3 style="backround-color:#FFF">Experiencia profesional</h3>
-    <div class="container">
+    <h3 transition:slide={{delay: animationDelay, duration: 2000, easing: cubicOut, axis: "x"}} >
+        Experiencia profesional
+    </h3>
+    <div class="container" transition:slide={{delay: animationDelay + 2000, duration: 1000}} >
         {#each experiences as experience}
             <div class="title-container">
                 <h4 style="flex-grow: 4;">{experience.role.title}</h4>
@@ -39,6 +40,8 @@
         margin: 0;
         border-radius: 0 1em 1em 0;
         background-color: #2E559682;
+        overflow: hidden;
+        white-space: nowrap;
     }
     h4{
         font-family: "Boldonse";

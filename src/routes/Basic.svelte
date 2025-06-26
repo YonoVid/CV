@@ -1,4 +1,7 @@
 <script lang="ts">
+    import { slide, fly } from "svelte/transition"
+    import { cubicIn } from "svelte/easing"
+
     import mapIcon from "$lib/assets/map-pin.svg"
     import phoneIcon from "$lib/assets/smartphone.svg"
     import mailIcon from "$lib/assets/mail.svg"
@@ -7,15 +10,19 @@
     import Socials from "./Socials.svelte";
     import { formatPhone } from "$lib";
 
-    let { personal }: {personal: PersonalData} = $props()
+    let { animationDelay = 0, personal }: { animationDelay?: number, personal: PersonalData } = $props()
 </script>
 
 <div style="padding: 0 0 1em 0">
     <div style="display: flex;">
-        <h1 style="color: white; backround-color:#FFF">{personal.name}</h1>
-        <Socials data={personal.social}/>
+        <h1 
+            transition:slide={{duration: 1000, delay: animationDelay, easing: cubicIn, axis:"x"}} 
+        >
+            {personal.name}
+        </h1>
+        <Socials data={personal.social} animationDelay={animationDelay + 1000}/>
     </div>
-    <div class="data">
+    <div class="data" transition:fly={{duration: 2000, delay: animationDelay + 1000, y: -10}}>
         <div class="data-item">
             <img width="10em" src="{mapIcon}" alt="Map Icon"/>
             <b>{personal.region}</b>
@@ -37,7 +44,10 @@
         padding: 0.5em 1em 0.5em 0.5em;
         margin: 0;
         border-radius: 0 1em 1em 0;
+        color: white;
         background-color: #2E5596;
+        overflow: hidden;
+        white-space: nowrap;
     }
     b, a{
         font-family: "Numans";

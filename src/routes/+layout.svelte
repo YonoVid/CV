@@ -1,5 +1,10 @@
-<script>
+<script lang="ts">
+    import { onMount } from "svelte"
+
+    let ready: boolean = $state(false)
     let { children } = $props()
+
+    onMount(() => ready = true)
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -11,7 +16,9 @@
 
 <div class="soft-blueprint" style="width: 100%; min-height:98vh; margin:0; padding: 0">
     <div class="boldonse-regular" style="width: 90%; margin: auto; padding: 2em 0 2em 0">
-        {@render children()}
+        {#if ready}
+            {@render children()}
+        {/if}
     </div>
 </div>
 

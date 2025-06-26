@@ -1,14 +1,16 @@
 <script lang="ts">
+    import { fly } from "svelte/transition"
+
     import githubLogo from "$lib/assets/github.svg"
     import linkedinLogo from "$lib/assets/linkedin.svg"
     import type { SocialLink } from "$lib/types/generic";
     
-    let { style, data }:{ style?: string, data: SocialLink[] } = $props();
+    let { style, animationDelay, data }:{ style?: string, animationDelay?: number, data: SocialLink[] } = $props();
 
 </script>
 
 
-<div style="{style? style: "display: flex; flex-direction:column; justify-content: space-evenly; padding: 0 0 0 0.5em"}">
+<div class="container" style="{style}" transition:fly={{x: -10, duration: 4000, delay: animationDelay || 1000}}>
     {#each data as social }
     <a href="{social.url}">
         {#if social.type == "Github"}
@@ -19,3 +21,12 @@
     </a>
     {/each}
 </div>
+
+<style>
+    .container{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-evenly;
+        padding: 0 0 0 0.5em;
+    }
+</style>

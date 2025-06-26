@@ -3,10 +3,10 @@ import type { FilterList, PersonalData, Tag } from "../types/generic";
 export const defaultFilter: FilterList = {
     white: [
             "Web", "TypeScript", "API REST",
-            "SQL Server", "Git", "Habilidad Dura",
+            "SQL Server", "Git", "Ofimática",
             "Habilidad Dura", "Habilidad Blanda"
         ],
-    black: ["HTML", "Svelte"]
+    black: ["HTML", "Svelte", "Power BI"]
 }
 
 export const personal: PersonalData = {
@@ -15,11 +15,12 @@ export const personal: PersonalData = {
     email: "david.esarhe@gmail.com",
     region: "Región Metropolitana de Santiago, Chile",
     skill: [
-        {tags: ["Habilidad Dura", "Web", "HTML", "JavaScript"], data: "Creación de interfaz web (HTML/JavaScript)"},
-        {tags: ["Habilidad Dura", "Web", "React", "TypeScript"], data: "Creación de aplicación web (React/JavaScript)"},
-        {tags: ["Habilidad Dura", "Web", "Svelte", "TypeScript"], data: "Creación de interfaz web (Svelte/JavaScript)"},
+        {tags: ["Habilidad Dura", "Web", "HTML", "JavaScript"], data: "Desarrollo web (HTML/JavaScript)"},
+        {tags: ["Habilidad Dura", "Web", "React", "TypeScript"], data: "Experiencia con frameworks web y móvil (React/React Native)"},
+        {tags: ["Habilidad Dura", "Web", "Svelte", "TypeScript"], data: "Creación de aplicación web (Svelte/JavaScript)"},
         {tags: ["Habilidad Dura", "BackEnd", "API REST"], data: "Desarrollo de API REST (Node)"},
         {tags: ["Habilidad Dura", "BackEnd", "SQL Server"], data: "Gestión de base de datos y Transact-SQL (SQL Server)"},
+        {tags: ["Habilidad Dura", "BackEnd", "Firebase"], data: "Uso de base de datos no relacional (Firebase)"},
         {tags: ["Habilidad Dura", "Desarrollo", "Proyecto", "Git"], data: "Control de versiones (Git)"},
         {tags: ["Habilidad Blanda", "Aprendizaje"], data: "Adaptabilidad a solución de problemas (Aprendizaje de tecnología adecuada)"},
         {tags: ["Habilidad Blanda", "Organización"], data: "Manejo de tiempo y responsabilidad (Entregar solicitudes en plazos planteados)"},
@@ -28,24 +29,28 @@ export const personal: PersonalData = {
     job: [
         {
             institution: "Orsan Cobranzas",
-            role: { title: "Desarrollador Junior"},
+            role: { title: "Desarrollador Full Stack Júnior"},
             state: "Activo",
             activities: [
                 {   
                     tags: ["Web", "Desarrollo", "FrontEnd", "VB.NET", "JavaScript"], 
-                    data: "Diseño y creación de soluciones web internas"
+                    data: "Desarrollo de soluciones web internas para optimizar procesos (JavaScript)"
                 },
                 {   
                     tags: ["Desarrollo", "BackEnd", "JavaScript", "TypeScript"], 
-                    data: "Automatización de procesos manuales de obtención de datos desde página web"
+                    data: "Automatización de obtención de datos desde páginas web (Node/Typescript)"
                 },
                 {
                     tags: ["BackEnd", "Server", "Node.js", "TypeScript", "Express", "API REST"], 
-                    data: "Desarrollo herramientas para mejorar procesos implementadas como API REST"
+                    data: "Implementación de herramientas en API REST (Node/Typescript)"
                 },
                 {
                     tags: ["Data", "BackEnd", "SQL Server"],
-                    data: "Gestión de bases de datos, generación de procedimientos automatizados y análisis de datos"
+                    data: "Creación de procedimientos para agilizar análisis datos (SQL Server)"
+                },
+                {
+                    tags: ["Data", "SQL Server", "Power BI"],
+                    data: "Diseño de reportería para obtener conocimiento de procesos (Power BI)"
                 }
             ],
             activeTime: { startYear: 2024, endYear: "Presente" }
@@ -68,7 +73,8 @@ export const personal: PersonalData = {
         {level: "Conversacional", name: "Inglés"}
     ],
     other: [
-        {tags: ["Ofimática"], data: "Ofimática"},
+        {tags: ["Ofimática"], data: "Ofimática (Microsoft Office)"},
+        {tags: ["Análisis de Datos"], data: "Análisis de Datos (Power BI)"},
         {tags: ["Edición de imágen"], data: "Edición de imágen básica"}
     ]
 }
