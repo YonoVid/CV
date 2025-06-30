@@ -24,6 +24,12 @@
 
     
 <style>
+    @media print {
+        @page {
+            size: letter;
+            margin: 0;
+        }
+    }
     /* Pattern from https://projects.verou.me/css3patterns/#blueprint-grid */
     .soft-blueprint{
         background-color:rgb(217, 229, 239);
