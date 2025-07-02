@@ -18,7 +18,7 @@ export const personal: PersonalData = {
         {tags: ["Habilidad Dura", "Web", "HTML", "JavaScript"], data: "Desarrollo web (HTML/JavaScript)"},
         {tags: ["Habilidad Dura", "Web", "React", "TypeScript"], data: "Experiencia con frameworks web y móvil (React/React Native)"},
         {tags: ["Habilidad Dura", "Web", "Svelte", "TypeScript"], data: "Creación de aplicación web (Svelte/JavaScript)"},
-        {tags: ["Habilidad Dura", "BackEnd", "API REST"], data: "Desarrollo de API REST (Node)"},
+        {tags: ["Habilidad Dura", "BackEnd", "API REST"], data: "Desarrollo de API REST (Node.js)"},
         {tags: ["Habilidad Dura", "BackEnd", "SQL Server"], data: "Gestión de base de datos y Transact-SQL (SQL Server)"},
         {tags: ["Habilidad Dura", "BackEnd", "Firebase"], data: "Uso de base de datos no relacional (Firebase)"},
         {tags: ["Habilidad Dura", "Desarrollo", "Proyecto", "Git"], data: "Control de versiones (Git)"},
@@ -34,23 +34,23 @@ export const personal: PersonalData = {
             activities: [
                 {   
                     tags: ["Web", "Desarrollo", "FrontEnd", "VB.NET", "JavaScript"], 
-                    data: "Desarrollo de soluciones web internas para optimizar procesos (JavaScript)"
+                    data: "Desarrollo de soluciones web internas para facilitar usabilidad y accesibiladad de herramientas existentes (JavaScript)"
                 },
                 {   
                     tags: ["Desarrollo", "BackEnd", "JavaScript", "TypeScript"], 
-                    data: "Automatización de obtención de datos desde páginas web (Node/Typescript)"
+                    data: "Automatización de procesamiento de información con páginas web externas, para optimizar tiempo de tareas en  más de un 50% y permitir paralelización (Node/Typescript)"
                 },
                 {
                     tags: ["BackEnd", "Server", "Node.js", "TypeScript", "Express", "API REST"], 
-                    data: "Implementación de herramientas en API REST (Node/Typescript)"
+                    data: "Implementación de interfaz unificada para acceder a funcionalidades de servicios internos mediante API REST (Node/Typescript)"
                 },
                 {
                     tags: ["Data", "BackEnd", "SQL Server"],
-                    data: "Creación de procedimientos para agilizar análisis datos (SQL Server)"
+                    data: "Creación y modificación de procedimientos para gestión y análisis datos, reduciendo tiempos de ejecución hasta un 80% (SQL Server)"
                 },
                 {
                     tags: ["Data", "SQL Server", "Power BI"],
-                    data: "Diseño de reportería para obtener conocimiento de procesos (Power BI)"
+                    data: "Diseño de reportería para obtener conocimiento de procesos, facilitando acceso a lo largo de la organización de información relevante  (Power BI)"
                 }
             ],
             activeTime: { startYear: 2024, endYear: "Presente" }

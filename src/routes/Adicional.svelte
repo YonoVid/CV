@@ -63,5 +63,6 @@
         text-align: center;
         flex: 3;
         justify-content: space-evenly;
+        font-size: 0.8em;
     }
 </style>

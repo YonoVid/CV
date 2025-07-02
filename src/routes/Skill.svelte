@@ -54,13 +54,21 @@
     {
         background-color: #ffffffbb;
         border-radius: 0.5em 0.5em 0.5em 0.5em;
-        padding: 0 0.5em 1em 0.5em;
+        padding: 0 1em 0 0;
         display: flex;
         justify-content: space-evenly;
+        font-size: 0.9em;
     }
     .container-item
     {
         flex: 1;
         margin: 0 0.5em 0 0.5em;
+    }
+    @media(max-width: 500px)
+    {
+        .container
+        {
+            flex-direction: column;
+        }   
     }
 </style>

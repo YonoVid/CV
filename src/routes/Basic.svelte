@@ -80,4 +80,13 @@
         align-items:center;
         background-color: #2e549682;
     }
+    @media(max-width:600px)
+    {
+        h1{
+            white-space: normal;
+        }
+        .data{
+            flex-direction: column;
+        }
+    }
 </style>
