@@ -20,17 +20,17 @@
     <h3 transition:slide={{ delay: animationDelay, duration: 2000, easing: cubicOut, axis: "x"}}>
         { titles?.main || "Habilidades" }
     </h3>
-    {#if hard.length > 0 || soft.length > 0 }
-        <div class="container" transition:slide={{delay: animationDelay + 2000, duration: 1000}}>
-            <div class="container-item">
+    <div class="container">
+        {#if hard.length > 0 || soft.length > 0 }
+            <div class="container-item" transition:slide={{delay: animationDelay + 2000, duration: 1000}}>
                 <h4>{ titles?.hard || "Habilidades Duras" }</h4>
-                <ul class="category-container" transition:slide={{delay: animationDelay + 2000, duration: 1000}} >
+                <ul class="category-container" >
                     {#each hard.filter((entry)=>complyFilter(entry.tags, filter)) as skill}
                         <li>{skill.data}.</li>
                     {/each}
                 </ul>
             </div>
-            <div class="container-item">
+            <div class="container-item" transition:slide={{delay: animationDelay + 2000, duration: 1000}}>
                 <h4>{ titles?.soft || "Habilidades Blandas" }</h4>
                 <ul class="category-container" style="margin: 1em 0 0 0">
                     {#each soft.filter((entry)=>complyFilter(entry.tags, filter)) as skill}
@@ -38,8 +38,8 @@
                     {/each}
                 </ul>
             </div>
-        </div>
-    {/if}
+        {/if}
+    </div>
 </div>
 
 <style>
