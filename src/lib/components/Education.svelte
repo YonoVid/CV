@@ -40,6 +40,7 @@
         font-family: "Boldonse";
         padding: 0.5em 3em 0.5em 0.5em;
         margin: 0;
+        white-space:nowrap;
     }
     h5{
         font-family: "Boldonse";

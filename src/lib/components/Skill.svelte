@@ -20,24 +20,26 @@
     <h3 transition:slide={{ delay: animationDelay, duration: 2000, easing: cubicOut, axis: "x"}}>
         { titles?.main || "Habilidades" }
     </h3>
-    <div class="container" transition:slide={{delay: animationDelay + 2000, duration: 1000}}>
-        <div class="container-item">
-            <h4>{ titles?.hard || "Habilidades Duras" }</h4>
-            <ul class="category-container">
-                {#each hard.filter((entry)=>complyFilter(entry.tags, filter)) as skill}
-                    <li>{skill.data}.</li>
-                {/each}
-            </ul>
+    {#if hard.length > 0 || soft.length > 0 }
+        <div class="container" transition:slide={{delay: animationDelay + 2000, duration: 1000}}>
+            <div class="container-item">
+                <h4>{ titles?.hard || "Habilidades Duras" }</h4>
+                <ul class="category-container" transition:slide={{delay: animationDelay + 2000, duration: 1000}} >
+                    {#each hard.filter((entry)=>complyFilter(entry.tags, filter)) as skill}
+                        <li>{skill.data}.</li>
+                    {/each}
+                </ul>
+            </div>
+            <div class="container-item">
+                <h4>{ titles?.soft || "Habilidades Blandas" }</h4>
+                <ul class="category-container" style="margin: 1em 0 0 0">
+                    {#each soft.filter((entry)=>complyFilter(entry.tags, filter)) as skill}
+                        <li>{skill.data}.</li>
+                    {/each}
+                </ul>
+            </div>
         </div>
-        <div class="container-item">
-            <h4>{ titles?.soft || "Habilidades Blandas" }</h4>
-            <ul class="category-container" style="margin: 1em 0 0 0">
-                {#each soft.filter((entry)=>complyFilter(entry.tags, filter)) as skill}
-                    <li>{skill.data}.</li>
-                {/each}
-            </ul>
-        </div>
-    </div>
+    {/if}
 </div>
 
 <style>
@@ -47,6 +49,7 @@
         margin: 0;
         border-radius: 0 1em 1em 0;
         background-color: #2E559682;
+        white-space:nowrap;
     }
     .container-item > h4{
         font-family: "Numans";
