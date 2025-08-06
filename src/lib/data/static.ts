@@ -4,7 +4,8 @@ export const defaultFilter: FilterList = {
     white: [
             "Web", "TypeScript", "API REST",
             "SQL Server", "Git", "Ofimática",
-            "Habilidad Dura", "Habilidad Blanda"
+            "Habilidad Dura", "Habilidad Blanda",
+            "Docker"
         ],
     black: ["HTML", "Svelte", "Power BI"]
 }
@@ -21,6 +22,7 @@ export const personal: PersonalData = {
         {tags: ["Habilidad Dura", "BackEnd", "API REST"], data: "Desarrollo de API REST (Node.js)"},
         {tags: ["Habilidad Dura", "BackEnd", "SQL Server"], data: "Gestión de base de datos y Transact-SQL (SQL Server)"},
         {tags: ["Habilidad Dura", "BackEnd", "Firebase"], data: "Uso de base de datos no relacional (Firebase)"},
+        {tags: ["Habilidad Dura", "Desarrollo", "Docker"], data: "Contenerización de aplicación (Docker)"},
         {tags: ["Habilidad Dura", "Desarrollo", "Proyecto", "Git"], data: "Control de versiones (Git)"},
         {tags: ["Habilidad Blanda", "Aprendizaje"], data: "Adaptabilidad a solución de problemas (Aprendizaje de tecnología adecuada)"},
         {tags: ["Habilidad Blanda", "Organización"], data: "Manejo de tiempo y responsabilidad (Entregar solicitudes en plazos planteados)"},

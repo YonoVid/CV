@@ -13,7 +13,7 @@
     let { animationDelay = 0, personal }: { animationDelay?: number, personal: PersonalData } = $props()
 </script>
 
-<div style="padding: 0 0 1em 0">
+<div style="padding: 0 0 0.5em 0">
     <div style="display: flex;">
         <h1 
             transition:slide={{duration: 1000, delay: animationDelay, easing: cubicIn, axis:"x"}} 
@@ -40,6 +40,7 @@
 
 <style>
     h1{
+        font-size: 2em;
         font-family: "Boldonse";
         padding: 0.5em 1em 0.5em 0.5em;
         margin: 0;

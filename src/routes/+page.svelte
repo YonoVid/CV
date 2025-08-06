@@ -2,7 +2,6 @@
     import { onMount } from "svelte";
     import { fade } from "svelte/transition";
 
-    import { page } from "$app/stores";
     import { defaultFilter, personal } from "$lib/data/static";
     import type { FilterList } from "$lib/types/generic";
     
