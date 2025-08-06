@@ -2,25 +2,34 @@
     import { slide } from "svelte/transition";
     import { cubicOut } from "svelte/easing";
 
-    import type { ExperienceData } from "$lib/types/generic";
+    import { complyFilter } from "$lib";
+    import type { FilterList, JobData } from "$lib/types/generic";
 
-    let { animationDelay = 0, experiences }: { animationDelay?: number, experiences: ExperienceData[] } = $props()
+    let { title, animationDelay = 0, experiences, filter }:
+        { title?: string, animationDelay?: number, experiences: JobData[], filter: FilterList } = $props()
 </script>
 
 <div style="display: flex; flex-flow: column; padding: 0.5em 0 0.5em 0">
     <h3 transition:slide={{delay: animationDelay, duration: 2000, easing: cubicOut, axis: "x"}} >
-        Educación
+        { title || "Experiencia profesional" }
     </h3>
     <div class="container" transition:slide={{delay: animationDelay + 2000, duration: 1000}} >
         {#each experiences as experience}
             <div class="title-container">
-                <h4 style="flex-grow: 4;">{experience.role.title} - {experience.state}</h4>
+                <h4 style="flex-grow: 4;">{experience.role.title}</h4>
                 
                 <div style="width: 40%; display: flex; flex-flow: column; text-align: center">
                     <h5>{experience.institution}</h5>
                     <b>({experience.activeTime.startYear} - {experience.activeTime.endYear})</b>
                 </div>
             </div>
+            <ul>
+                {#each experience.activities.filter((entry)=>complyFilter(entry.tags, filter)) as activity}
+                <li>
+                    {activity.data}.
+                </li>
+                {/each}
+            </ul>
         {/each}
     </div>
 </div>
@@ -46,7 +55,7 @@
         text-align: center;
         margin: auto;
     }
-    b{
+    b, li{
         font-family: "Numans";
     }
     .title-container

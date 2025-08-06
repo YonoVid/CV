@@ -3,20 +3,26 @@
     import { cubicOut } from "svelte/easing";
 
     import { complyFilter } from "$lib";
-    import type { FilterList, TagData } from "$lib/types/generic";
+    import type { FilterList, SkillTitles, TagData } from "$lib/types/generic";
 
-    let { animationDelay = 0, skills, filter }: { animationDelay?: number, skills: TagData[], filter: FilterList } = $props()
-    let hard = skills.filter((skill)=>skill.tags.includes("Habilidad Dura"))
-    let soft = skills.filter((skill)=>skill.tags.includes("Habilidad Blanda"))
+    let { titles, animationDelay = 0, skills, filter }: 
+        { titles?: SkillTitles, animationDelay?: number, skills: TagData[], filter: FilterList } = $props()
+    let hard: TagData[] = $state([])
+    let soft: TagData[] = $state([])
+
+    $effect(()=>{
+        hard = skills.filter((skill)=>skill.tags.includes("Habilidad Dura"))
+        soft = skills.filter((skill)=>skill.tags.includes("Habilidad Blanda"))
+    })
 </script>
 
 <div style="display: flex; flex-flow: column; padding: 0.5em 0 0.5em 0">
     <h3 transition:slide={{ delay: animationDelay, duration: 2000, easing: cubicOut, axis: "x"}}>
-        Habilidades
+        { titles?.main || "Habilidades" }
     </h3>
     <div class="container" transition:slide={{delay: animationDelay + 2000, duration: 1000}}>
         <div class="container-item">
-            <h4>Habilidades Duras</h4>
+            <h4>{ titles?.hard || "Habilidades Duras" }</h4>
             <ul class="category-container">
                 {#each hard.filter((entry)=>complyFilter(entry.tags, filter)) as skill}
                     <li>{skill.data}.</li>
@@ -24,7 +30,7 @@
             </ul>
         </div>
         <div class="container-item">
-            <h4>Habilidades Blandas</h4>
+            <h4>{ titles?.soft || "Habilidades Blandas" }</h4>
             <ul class="category-container" style="margin: 1em 0 0 0">
                 {#each soft.filter((entry)=>complyFilter(entry.tags, filter)) as skill}
                     <li>{skill.data}.</li>

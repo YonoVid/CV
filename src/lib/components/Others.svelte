@@ -3,16 +3,21 @@
     import { cubicOut } from "svelte/easing";
 
     import { complyFilter } from "$lib";
-    import type { FilterList, PersonalData } from "$lib/types/generic";
+    import type { FilterList, OtherTitles, PersonalData, TagData } from "$lib/types/generic";
 
-    let { animationDelay = 0, personal, filter }: { animationDelay?: number, personal: PersonalData, filter: FilterList } = $props()
-    const others = (personal.other || []).filter((entry)=>complyFilter(entry.tags, filter))
+    let { titles, animationDelay = 0, personal, filter }: 
+        { titles?: OtherTitles, animationDelay?: number, personal: PersonalData, filter: FilterList } = $props()
+    let others: TagData[] = $state([])
+
+    $effect(() => {
+        others = (personal.other || []).filter((entry)=>complyFilter(entry.tags, filter))
+    })
 </script>
 
 <div style="display: flex; flex-flow: column; padding: 0.5em 0 0.5em 0">
     <div class="content" transition:fly={{delay: animationDelay, duration: 2000, easing: cubicOut, x: -50}}>
         <h5 class="content-title">
-            Idiomas
+            {titles?.language || "Idiomas"}
         </h5>
         <div class="content-data">
             {#each personal.lenguage as lenguage}
@@ -23,7 +28,7 @@
     {#if others.length > 0}
         <div class="content" transition:fly|global={{delay: animationDelay, duration: 2000, easing: cubicOut, x: -50}}>
             <h6 class="content-title">
-                Otros conocimientos
+                {titles?.other || "Otros conocimientos"}
             </h6>
             <div class="content-data" style="font-size: 0.7em">
                 {#each others as skill}
