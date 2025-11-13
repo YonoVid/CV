@@ -7,9 +7,9 @@ export const defaultFilter: FilterList = {
             "Web", "TypeScript", "API REST",
             "SQL Server", "Git", "Ofimática",
             "Habilidad Dura", "Habilidad Blanda",
-            "Docker"
+            "Análisis de Datos","Docker"
         ],
-    black: ["HTML", "Svelte", "Power BI"]
+    black: ["HTML", "Laravel", "Power BI", "Svelte", "Nuxt", "Flutter", "Scraping", "Angular"]
 }
 
 export const getLocalization = (lang: string) =>{

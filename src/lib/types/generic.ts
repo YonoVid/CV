@@ -15,10 +15,11 @@ export interface Language {
 
 export type ExperienceState = "Activo"|"Titulado"|"Egresado"|null
 
-export type LenguageTag = "HTML"|"JavaScript"|"TypeScript"|"C++"|"Python"|"VB.NET"|"SQL Server"|"Oracle"|"MySQL"
-export type ToolTag = "Node.js"|"Express"|"React"|"Svelte"|"API REST"|"Firebase"|"Git"|"Power BI"|"Docker"
-export type CategoryTag = "Web"|"Server"|"FrontEnd"|"BackEnd"|"Data"|"Desarrollo"|"Proyecto"|
-                            "Análisis de Datos"|"Habilidad Dura"|"Habilidad Blanda" 
+export type LenguageTag = "HTML"|"JavaScript"|"TypeScript"|"C++"|"Python"|"VB.NET"|"SQL Server"|"Oracle"|"MySQL"|"PHP"
+export type ToolTag = "Node.js"|"Express"|"React"|"Angular"|"Flutter"|"Svelte"|"API REST"|"Firebase"|"Git"|"Power BI"|"Docker"|
+                        "Laravel"|"Nuxt"|"TailwindCSS"
+export type CategoryTag = "Web"|"Server"|"FrontEnd"|"BackEnd"|"Scraping"|"Data"|"Desarrollo"|"Proyecto"|
+                            "Análisis de Datos"|"Habilidad Dura"|"Habilidad Blanda"
 export type OtherTag = "Comunicación"|"Organización"|"Aprendizaje"|"Ofimática"|"Edición de imágen"|"Other"
 
 export type Tag = LenguageTag|ToolTag|CategoryTag|OtherTag

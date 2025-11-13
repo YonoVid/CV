@@ -8,7 +8,9 @@ export const personalEN: PersonalData = {
     skill: [
         {tags: ["Habilidad Dura", "Web", "HTML", "JavaScript"], data: "Web development (HTML/JavaScript)"},
         {tags: ["Habilidad Dura", "Web", "React", "TypeScript"], data: "Experience with web and mobile development frameworks (React/React Native)"},
+        {tags: ["Habilidad Dura", "Web", "Flutter", "TypeScript"], data: "Experience with multi-platform frameworks (Flutter)"},
         {tags: ["Habilidad Dura", "Web", "Svelte", "TypeScript"], data: "Web application development (Svelte/JavaScript)"},
+        {tags: ["Habilidad Dura", "Web", "Nuxt", "TypeScript"], data: "Web progresive framework development (Nuxt)"},
         {tags: ["Habilidad Dura", "BackEnd", "API REST"], data: "Design of API REST (Node.js)"},
         {tags: ["Habilidad Dura", "BackEnd", "SQL Server"], data: "Database management and automation with procedures (SQL Server)"},
         {tags: ["Habilidad Dura", "BackEnd", "Firebase"], data: "Non-relational databases (Firebase)"},
@@ -29,7 +31,11 @@ export const personalEN: PersonalData = {
                     data: "Full-stack design and development of web applications for better usability and access (JavaScript)"
                 },
                 {   
-                    tags: ["Desarrollo", "BackEnd", "JavaScript", "TypeScript"], 
+                    tags: ["Web", "Desarrollo", "FrontEnd", "TailwindCSS", "JavaScript"], 
+                    data: "Design and implementation of productivity Web tools, reducing lookup times over 20% (JavaScript)"
+                },
+                {   
+                    tags: ["Desarrollo", "BackEnd", "Scraping", "JavaScript", "TypeScript"], 
                     data: "Configuration of scraping bot for external web pages, increasing task efficiency over 50% and allowing parallelization (Node/Typescript)"
                 },
                 {
@@ -41,7 +47,7 @@ export const personalEN: PersonalData = {
                     data: "Creation and modification of procedures for data processing and analysis, reducing task execution times up to 80% (SQL Server)"
                 },
                 {
-                    tags: ["Data", "SQL Server", "Power BI"],
+                    tags: ["Data", "Análisis de Datos", "SQL Server", "Power BI"],
                     data: "Design of reports with key process indicators, allowing access to business insight (Power BI)"
                 }
             ],

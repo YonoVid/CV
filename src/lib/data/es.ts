@@ -7,7 +7,11 @@ const personalES: PersonalData = {
     region: "Región Metropolitana de Santiago, Chile",
     skill: [
         {tags: ["Habilidad Dura", "Web", "HTML", "JavaScript"], data: "Desarrollo web (HTML/JavaScript)"},
+        {tags: ["Habilidad Dura", "Web", "Angular", "TypeScript"], data: "Experiencia con frameworks web (Angular)"},
+        {tags: ["Habilidad Dura", "Web", "Laravel", "TypeScript"], data: "Experiencia con frameworks web (PHP/Laravel)"},
         {tags: ["Habilidad Dura", "Web", "React", "TypeScript"], data: "Experiencia con frameworks web y móvil (React/React Native)"},
+        {tags: ["Habilidad Dura", "Web", "Flutter", "TypeScript"], data: "Experiencia con frameworks mutiplataforma (Flutter)"},
+        {tags: ["Habilidad Dura", "Web", "Nuxt", "TypeScript"], data: "Experiencia con framework Web (Nuxt)"},
         {tags: ["Habilidad Dura", "Web", "Svelte", "TypeScript"], data: "Creación de aplicación web (Svelte/JavaScript)"},
         {tags: ["Habilidad Dura", "BackEnd", "API REST"], data: "Desarrollo de API REST (Node.js)"},
         {tags: ["Habilidad Dura", "BackEnd", "SQL Server"], data: "Gestión de base de datos y Transact-SQL (SQL Server)"},
@@ -29,7 +33,11 @@ const personalES: PersonalData = {
                     data: "Desarrollo de soluciones web internas para facilitar usabilidad y accesibiladad de herramientas existentes (JavaScript)"
                 },
                 {   
-                    tags: ["Desarrollo", "BackEnd", "JavaScript", "TypeScript"], 
+                    tags: ["Web", "Desarrollo", "FrontEnd", "TailwindCSS", "JavaScript"], 
+                    data: "Diseño e implementación de herramientas web interactivas para productividad, reduciendo tiempos de búsqueda desde un 20% (JavaScript)"
+                },
+                {   
+                    tags: ["Desarrollo", "BackEnd", "Scraping", "JavaScript", "TypeScript"], 
                     data: "Automatización de procesamiento de información con páginas web externas, para optimizar tiempo de tareas en  más de un 50% y permitir paralelización (Node/Typescript)"
                 },
                 {
