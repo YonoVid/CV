@@ -10,7 +10,7 @@ export const defaultFilter: FilterList = {
             "Proyecto",
             "Análisis de Datos","Docker"
         ],
-    black: ["Scraping", "Git", "HTML", "Laravel", "Power BI", "Svelte", "Nuxt", "Flutter", "Angular"]
+    black: ["Scraping", "Git", "HTML", "Laravel", "React", "Power BI", "Svelte", "Nuxt", "Flutter"]
 }
 
 export const getLocalization = (lang: string) =>{
