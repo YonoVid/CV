@@ -19,8 +19,8 @@ export type LenguageTag = "HTML"|"JavaScript"|"TypeScript"|"C++"|"Python"|"VB.NE
 export type ToolTag = "Node.js"|"Express"|"React"|"Angular"|"Flutter"|"Svelte"|"API REST"|"Firebase"|"Git"|"Power BI"|"Docker"|
                         "Laravel"|"Nuxt"|"TailwindCSS"
 export type CategoryTag = "Web"|"Server"|"FrontEnd"|"BackEnd"|"Scraping"|"Data"|"Desarrollo"|"Proyecto"|
-                            "Análisis de Datos"|"Habilidad Dura"|"Habilidad Blanda"
-export type OtherTag = "Comunicación"|"Organización"|"Aprendizaje"|"Ofimática"|"Edición de imágen"|"Other"
+                            "Documentación"|"Análisis de Datos"|"Habilidad Dura"|"Habilidad Blanda"
+export type OtherTag = "Comunicación"|"Ejecución"|"Organización"|"Aprendizaje"|"Ofimática"|"Edición de imágen"|"Other"
 
 export type Tag = LenguageTag|ToolTag|CategoryTag|OtherTag
 

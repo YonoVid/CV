@@ -13,12 +13,14 @@ const personalES: PersonalData = {
         {tags: ["Habilidad Dura", "Web", "Flutter", "TypeScript"], data: "Experiencia con frameworks mutiplataforma (Flutter)"},
         {tags: ["Habilidad Dura", "Web", "Nuxt", "TypeScript"], data: "Experiencia con framework Web (Nuxt)"},
         {tags: ["Habilidad Dura", "Web", "Svelte", "TypeScript"], data: "Creación de aplicación web (Svelte/JavaScript)"},
-        {tags: ["Habilidad Dura", "BackEnd", "API REST"], data: "Desarrollo de API REST (Node.js)"},
+        {tags: ["Habilidad Dura", "BackEnd", "API REST"], data: "Implementación de API REST (Node.js)"},
         {tags: ["Habilidad Dura", "BackEnd", "SQL Server"], data: "Gestión de base de datos y Transact-SQL (SQL Server)"},
         {tags: ["Habilidad Dura", "BackEnd", "Firebase"], data: "Uso de base de datos no relacional (Firebase)"},
         {tags: ["Habilidad Dura", "Desarrollo", "Docker"], data: "Contenerización de aplicación (Docker)"},
+        {tags: ["Habilidad Dura", "Proyecto", "Documentación"], data: "Documentación y creación de código mantenible (SOLID)"},
         {tags: ["Habilidad Dura", "Desarrollo", "Proyecto", "Git"], data: "Control de versiones (Git)"},
         {tags: ["Habilidad Blanda", "Aprendizaje"], data: "Adaptabilidad a solución de problemas (Aprendizaje de tecnología adecuada)"},
+        {tags: ["Habilidad Blanda", "Ejecución"], data: "Resilencia y flexibilidad (Adapterse a cambios de requerimientos)."},
         {tags: ["Habilidad Blanda", "Organización"], data: "Manejo de tiempo y responsabilidad (Entregar solicitudes en plazos planteados)"},
         {tags: ["Habilidad Blanda", "Comunicación"], data: "Comunicación efectiva para trabajos en equipo"}
     ],
@@ -73,6 +75,7 @@ const personalES: PersonalData = {
         {level: "Conversacional", name: "Inglés"}
     ],
     other: [
+        {tags: ["Proyecto"], data: "Control de versiones (Git/Github)"},
         {tags: ["Ofimática"], data: "Ofimática (Microsoft Office)"},
         {tags: ["Análisis de Datos"], data: "Análisis de Datos (Power BI)"},
         {tags: ["Edición de imágen"], data: "Edición de imágen básica"}

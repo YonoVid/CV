@@ -11,12 +11,14 @@ export const personalEN: PersonalData = {
         {tags: ["Habilidad Dura", "Web", "Flutter", "TypeScript"], data: "Experience with multi-platform frameworks (Flutter)"},
         {tags: ["Habilidad Dura", "Web", "Svelte", "TypeScript"], data: "Web application development (Svelte/JavaScript)"},
         {tags: ["Habilidad Dura", "Web", "Nuxt", "TypeScript"], data: "Web progresive framework development (Nuxt)"},
-        {tags: ["Habilidad Dura", "BackEnd", "API REST"], data: "Design of API REST (Node.js)"},
-        {tags: ["Habilidad Dura", "BackEnd", "SQL Server"], data: "Database management and automation with procedures (SQL Server)"},
+        {tags: ["Habilidad Dura", "BackEnd", "API REST"], data: "Design of API REST (Node.js/Express)"},
+        {tags: ["Habilidad Dura", "BackEnd", "SQL Server"], data: "Database management and automatization (SQL Server)"},
         {tags: ["Habilidad Dura", "BackEnd", "Firebase"], data: "Non-relational databases (Firebase)"},
         {tags: ["Habilidad Dura", "Desarrollo", "Docker"], data: "Application containerization (Docker)"},
+        {tags: ["Habilidad Dura", "Proyecto", "Documentación"], data: "Documentation and creation of mantainable code (SOLID)"},
         {tags: ["Habilidad Dura", "Desarrollo", "Proyecto", "Git"], data: "Version control (Git)"},
         {tags: ["Habilidad Blanda", "Aprendizaje"], data: "Adaptability and problem solving (Finding the right technology )"},
+        {tags: ["Habilidad Blanda", "Ejecución"], data: "Resilience and flexibility (Adapting to chaging requirements)."},
         {tags: ["Habilidad Blanda", "Organización"], data: "Time management and responsibility (Meeting realistic deadlines)"},
         {tags: ["Habilidad Blanda", "Comunicación"], data: "Effective team communication"}
     ],
@@ -71,6 +73,7 @@ export const personalEN: PersonalData = {
         {level: "Conversational", name: "English"}
     ],
     other: [
+        {tags: ["Proyecto"], data: "Version control (Git/Github)"},
         {tags: ["Ofimática"], data: "Office software (Microsoft Office)"},
         {tags: ["Análisis de Datos"], data: "Data analysis (Power BI)"},
         {tags: ["Edición de imágen"], data: "Basic photo editing"}

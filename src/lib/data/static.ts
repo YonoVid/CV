@@ -5,11 +5,12 @@ import { localizationES } from "./es";
 export const defaultFilter: FilterList = {
     white: [
             "Web", "TypeScript", "API REST",
-            "SQL Server", "Git", "Ofimática",
+            "SQL Server", "Ofimática",
             "Habilidad Dura", "Habilidad Blanda",
+            "Proyecto",
             "Análisis de Datos","Docker"
         ],
-    black: ["HTML", "Laravel", "Power BI", "Svelte", "Nuxt", "Flutter", "Scraping", "Angular"]
+    black: ["Scraping", "Git", "HTML", "Laravel", "Power BI", "Svelte", "Nuxt", "Flutter", "Angular"]
 }
 
 export const getLocalization = (lang: string) =>{
