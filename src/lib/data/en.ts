@@ -18,7 +18,7 @@ export const personalEN: PersonalData = {
         {tags: ["Habilidad Dura", "Proyecto", "Documentación"], data: "Documentation and creation of mantainable code (SOLID)"},
         {tags: ["Habilidad Dura", "Desarrollo", "Proyecto", "Git"], data: "Version control (Git)"},
         {tags: ["Habilidad Blanda", "Aprendizaje"], data: "Adaptability and problem solving (Finding the right technology )"},
-        {tags: ["Habilidad Blanda", "Ejecución"], data: "Resilience and flexibility (Adapting to chaging requirements)."},
+        {tags: ["Habilidad Blanda", "Ejecución"], data: "Resilience and flexibility (Adapting to chaging requirements)"},
         {tags: ["Habilidad Blanda", "Organización"], data: "Time management and responsibility (Meeting realistic deadlines)"},
         {tags: ["Habilidad Blanda", "Comunicación"], data: "Effective team communication"}
     ],

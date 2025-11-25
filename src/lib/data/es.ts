@@ -20,7 +20,7 @@ const personalES: PersonalData = {
         {tags: ["Habilidad Dura", "Proyecto", "Documentación"], data: "Documentación y creación de código mantenible (SOLID)"},
         {tags: ["Habilidad Dura", "Desarrollo", "Proyecto", "Git"], data: "Control de versiones (Git)"},
         {tags: ["Habilidad Blanda", "Aprendizaje"], data: "Adaptabilidad a solución de problemas (Aprendizaje de tecnología adecuada)"},
-        {tags: ["Habilidad Blanda", "Ejecución"], data: "Resilencia y flexibilidad (Adapterse a cambios de requerimientos)."},
+        {tags: ["Habilidad Blanda", "Ejecución"], data: "Resilencia y flexibilidad (Adapterse a cambios de requerimientos)"},
         {tags: ["Habilidad Blanda", "Organización"], data: "Manejo de tiempo y responsabilidad (Entregar solicitudes en plazos planteados)"},
         {tags: ["Habilidad Blanda", "Comunicación"], data: "Comunicación efectiva para trabajos en equipo"}
     ],
